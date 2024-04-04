@@ -1,0 +1,349 @@
+*{
+  
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(8, 119, 8);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: 50px;
+  margin-right: 0px;
+  width: 1345px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+  margin-right: 0px;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  padding:0px 16px;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 0px 0px ;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(3, 56, 3);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.button {
+  border-radius: 4px;
+  background-color: rgb(255, 0, 0);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 4px 2px;
+  display: inline;
+}
+.btn1{
+  margin-left: 1110px;
+
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.img {
+  width: 1345px;
+  height: 500px;
+  background-attachment: fixed;
+  overflow: hidden;
+  
+}
+
+.quotes {
+  position: absolute;
+  transform: translate(85%, -180%);
+}
+
+.header {
+  font-size: 50;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@keyframes example {
+  0%   {color:red; left:0px; top:0px;}
+  25%  {color:yellow; left:200px; top:0px;}
+  50%  {color:blue; left:200px; top:200px;}
+  75%  {color:green; left:0px; top:200px;}
+  100% {color:red; left:0px; top:0px;}
+}
+
+.special {
+  color: orangered;
+  position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse; 
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 12px;
+  background-color: white;
+  color: black;
+  border: 2px solid #04AA6D;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.btn:hover{
+  background-color: #04AA6D;
+  color: white;
+}
+.cards{
+  
+  height: 300px;
+  display: flex;
+}
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin-left:30px;
+  border-radius:15px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius:15px;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius:15px;
+  
+}
+
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius:15px;
+  
+}
+
+
+.flip-card-back {
+  background-color: green;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius:15px;
+}
+.divider {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.divider::before, .divider::after {
+  flex: 1;
+  content: '';
+  padding: 3px;
+  background-color: red;
+  margin: 5px;
+}
+
+.footer{
+  height: 500px;
+  width: 1345px;
+  background-image: url(../img/footer5.jpg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.footer-link{
+  display: flex;
+  margin-right: 20px;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+.sub-footer-link{
+  margin-top: 50px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+.links{
+  text-decoration: none;
+}
+.social-media{
+  margin-left: 80px;
+  margin-top: -50px;
+  
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+/* Twitter */
+.fa-instagram {
+  background: rgb(248, 3, 187);
+  color: white;
+}
+.search-bar input[type=text] {
+  margin-left: 770px;
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+}
+.search-bar button{
+  
+  display: block;
+  text-align: left;
+  width: 20px;
+  margin: 0;
+  padding: 14px;
+}
+.submit-btn{
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 770px;
+
+}
+.copyright{
+  text-align: center;
+  padding-top: 20px;
+}
+.dark-mode {
+  background-color: black;
+  color: rgb(129, 3, 3) ;
+  
+}
+
+.btn-mode {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn-mode:hover {
+  background-color: royalblue;
+}
